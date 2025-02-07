@@ -42,11 +42,6 @@ public class Principal {
 
         // 3.4 Aumento de 10% no salário
         funcionarios.forEach(func -> func.setSalario(func.getSalario().multiply(BigDecimal.valueOf(1.10))));
-        // Imprimir os salários atualizados
-        System.out.println("Salários atualizados com aumento de 10%:");
-        funcionarios.forEach(func -> {
-            System.out.println(func.getNome() + " - Novo salário: " + currencyFormatter.format(func.getSalario()));
-        });
 
         // 3.5 Agrupar os funcionários por função
         Map<String, List<Funcionario>> funcionariosPorFuncao = new HashMap<>();
